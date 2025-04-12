@@ -35,7 +35,7 @@
     <div class="row mb-4">
       <div class="col-12 text-center">
         <h1>Proyecto Web con Bootstrap</h1>
-        <p class="text-muted">Germán Hincapíe, Programación Web ll, Uniremington.</p>
+        <p class="text-muted">Germán Hincapíe, Programación Web II, Uniremington.</p>
       </div>
     </div>
 
@@ -131,7 +131,99 @@
       </div>
     </div>
   </div>
+    <!-- Video estilo retro centrado -->
+    <div class="row video-retro">
+      <div class="col-md-12">
+        <h3 class="text-center">🎬 Video Estilo Retro sobre Bootstrap</h3>
+        <div class="d-flex justify-content-center">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=zC3ebsg8sOo&t=841s&ab_channel=FalconMasters" title="Video retro Bootstrap" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Proyecto Bootstrap</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+        body {
+          background-color: #f0f0f0;
+          font-family: 'Courier New', Courier, monospace;
+          color: #000080;
+        }
+        h1, h3 {
+          font-family: 'Lucida Console', Monaco, monospace;
+          color: #800000;
+        }
+        .retro-box {
+          border: 2px dashed #008000;
+          background-color: #fffacd;
+          box-shadow: 5px 5px 0px #000;
+        }
+        .retro-table th, .retro-table td {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #e0ffff;
+          border: 1px solid #000;
+        }
+        .retro-table th {
+          background-color: #ffe4e1;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container mt-5">
+        <!-- ... Todo el contenido anterior igual que antes ... -->
+    
+        <!-- Botón para abrir el modal de referencias -->
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalReferencias">
+              📚 Ver Referencias
+            </button>
+          </div>
+        </div>
+    
+        <!-- Modal de Referencias -->
+        <div class="modal fade" id="modalReferencias" tabindex="-1" aria-labelledby="modalReferenciasLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content retro-box">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalReferenciasLabel">📚 Referencias</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Bootstrap. (s.f.). <em>Introducción · Bootstrap</em>. Recuperado el 3 de abril de 2025, de <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a></p>
+                <p>W3Schools. (s.f.). <em>Bootstrap 5 Introduction</em>. Recuperado el 3 de abril de 2025, de <a href="https://www.w3schools.com/bootstrap5/bootstrap_intro.asp" target="_blank">https://www.w3schools.com/bootstrap5/bootstrap_intro.asp</a></p>
+                <p>MDN Web Docs. (s.f.). <em>Introduction to Bootstrap</em>. Recuperado el 3 de abril de 2025, de <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction</a></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Sonido retro oculto -->
+        <audio id="sonidoRetro" src="https://www.myinstants.com/media/sounds/8-bit-powerup.mp3" preload="auto"></audio>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        const modal = document.getElementById('modalReferencias');
+        const sonido = document.getElementById('sonidoRetro');
+    
+        modal.addEventListener('show.bs.modal', function () {
+          sonido.play();
+        });
+    
+        modal.addEventListener('hidden.bs.modal', function () {
+          alert("¡Gracias por revisar las referencias! 🎮📚");
+        });
+      </script>
+    </body>
+    </html>
+    
